@@ -1,0 +1,341 @@
+/* Importacao da fonte do google fontes */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Public+Sans:wght@300;400;800&display=swap');
+
+body{
+    font-family: 'Public Sans', sans-serif;
+}
+/* Reset*/
+
+*{
+    margin: 0;/*zera a margem*/
+    padding: 0;/*zera o padding*/
+    box-sizing: border-box;
+    color: #000;/*colocara a cor da fonte em preto*/
+    
+}
+img{
+    max-width: 100%;/*coloca um limite para a imagem, que neste caso, sera o tamanho mazimo da tela*/
+}
+a{
+    text-decoration: none;/*tira o estilo padrao dos links*/
+}
+ul{
+    list-style: none;/*tira os pontinhos da lista criada*/
+}
+html{
+    scroll-behavior: smooth;/*para o scrow do mouse descer suavemente para as ancoras*/
+}
+
+/*cabecalho*/
+
+.cabecalho .logo .imagem{
+    width: 200px;
+}
+.cabecalho{
+    display: flex;/*para alinhar os itens do container de forma horizontal*/
+    justify-content: space-between;/*para a ceparacao dos itens do container*/
+    align-items: center;
+    padding: 25px 0;/*espacamento do padding top e paddind botton*/
+    max-width: 1170px;/* valor de tela de notebook*/
+    margin: 0 auto;/*centralizara o grupo e deixara ele no meio da pagina*/
+    flex-wrap: wrap;    
+
+}
+.cabecalho .navegacao .menu{/*Esta deixando os itens da margem alinhada horizontalmente*/
+    display: flex;
+}
+.cabecalho .navegacao .menu .item{
+    margin: 10px;
+}
+.cabecalho .navegacao .menu .item a{
+    padding: 15px;
+    transition: 0.5s ease-in-out;
+    border-radius: 100px
+}
+.cabecalho .navegacao .menu .item a:hover{/*definir oque vai acontecer quando o cursor passar por cima*/
+    background-color: #0e1444;
+    color: #fff;
+    ;/*Deixa os cantos arredondados*/
+    transform: scale(4);
+}
+/*Painel*/
+
+.conteudo-principal .paineis{
+    display: flex;
+    justify-content: center;/*joga para o meio da pagina*/
+    align-items: center;
+    height: 700px;
+    position: relative;/*Nao tao usado, para permitir posicionar um elemtento relatico*/
+    margin-bottom: 150px;
+}
+.conteudo-principal .paineis .titulo{
+    font-size: calc(1em + 1vw);
+    color: #fff;
+    text-transform: uppercase;
+}
+.conteudo-principal .paineis .seta{
+background: url(../img/seta.png);
+background-repeat: no-repeat;
+background-position: center;
+background-size: contain;
+width: 50px;
+position: absolute;
+text-indent: 100%;
+overflow: hidden;
+}
+.conteudo-principal .paineis .btn-voltar{/*quando tem duas classe no mesmo elemento usa-se sem o espacamento no css*/
+    left: 20px;
+    transform: rotate(180deg);
+}
+.conteudo-principal .paineis .btn-avancar{
+    right: 20px;
+}
+.conteudo-principal .paineis .imagem-painel{
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(60%);
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+.conteudo-principal .paineis .projeto1{
+    background-image: url(../img/serralheiro-painel.jpg);
+}
+.conteudo-principal .paineis .projeto2{
+    background-image: url(../img/Portao-painel.jpg);
+}
+.conteudo-principal .paineis .projeto3{
+    background-image: url(../img/motor-painel.jpg);
+}
+.conteudo-principal .paineis .imagem-painel.mostrar{
+    opacity: 1;
+}
+/*quem-somos*/
+.quem-somos{
+    background-color: #0e1444;
+}
+.quem-somos .conteudo{
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 10%;
+}
+.quem-somos .conteudo .informacoes{
+    width: 50%;
+}
+.quem-somos .conteudo .imagem{
+    background-image: url('../img/imagem-quem-somos.jpg');
+    width: 50%;
+    background-size: cover;
+    height: 500px;
+}
+
+.quem-somos .conteudo .informacoes .titulo{
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.quem-somos .conteudo .informacoes .texto{
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+.quem-somos .conteudo .informacoes{
+    width: 100%;
+}
+/*Card de servicos*/
+.titulo-serralheria, .titulo-motores{
+    margin-top: 30px;
+    padding: 20px 0 0 20px;
+    text-align: center;
+    font-size: 30px;
+
+}
+.container-serralheria, .container-motores{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card{
+    background-color: #f1f1f1;
+    width: 270px;
+    margin: 40px 20px 20px 20px;
+    text-align: center;
+    border-radius: 15px;
+}
+.card-img{
+    background-color: turquoise;
+    height: 200px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 15px 15px 0 0;
+}
+.card:hover{
+    background-color: #e2e2e2;
+    border-radius: 15px 15px 0 0;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 1s ease-in-out;
+}
+.card p{
+    padding: 10px;
+}
+.card a{
+    background-color: #262b88;
+    color: #fff;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    margin: 20px 50px;
+    border-radius: 10px;
+    transition: all 1s ease-in-out;
+}
+.card a:hover{
+    transform: scale(1.07);
+}
+
+.servicos1{
+    background-image: url('../img/reparos-card.jpg');
+
+}
+.servicos2{
+    background-image: url('../img/portoes-card.jpg');
+}
+.servicos3{
+    background-image: url('../img/grade-card.jpg');
+
+}
+.servicos4{
+    background-image: url('../img/motor-card.jpg');
+
+}
+.servicos5{
+    background-image: url('../img/placas-card.jpg');
+
+}
+.servicos6{
+    background-image: url('../img/instalacao-card.jpg');
+}
+/*Footer*/
+.rodape{
+    padding: 80px 0 20px 0;
+    border-top: 2px solid #0e1444;
+}
+.rodape .navegacao{
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.rodape .redes-sociais{
+    display: flex;
+    justify-content: center;
+}
+.rodape .redes-sociais a{
+    
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    font-size: 30px;
+    border: 2px solid black;
+    border-radius: 400px;
+    padding: 30px;
+    transition: 0.5s ease-in-out;
+    align-items: center;
+}
+.rodape .redes-sociais a:hover{
+    background-color: #262b88;
+
+}    
+.rodape .navegacao .logo{
+    margin-left: 7px;/*esta dando um espacamento entre o titulo do site e a logo*/
+     font-size: 17px;/*tamanho de fonte*/
+    font-weight: 800;
+}
+.rodape .sociais{
+    transition: 0.3s ease-in-out;
+    padding: 10px;
+    text-align: center;
+}
+.rodape .sociais .contatos-comerciais{
+    transition: 1s ease-in-out;
+}
+.rodape .sociais .contatos-comerciais a:hover{
+    color: #262b88;
+    text-transform: uppercase;
+}
+.rodape .navegacao .endereco{
+    padding: 50px;
+    transition: 1s ease-in-out;
+}
+.rodape .navegacao .endereco a:hover{
+    color: #262b88;
+}
+.rodape .navegacao .logo .imagem{
+    width: 300px;
+    padding: 20px;
+}
+.rodape .copyright{
+    margin-top: 70px;
+    text-align: center;
+    font-weight: 400;
+}
+@media (max-width: 642px){
+    .cabecalho{
+    justify-content:center;
+    }
+    .cabecalho .logo{
+        margin-bottom: 30px;
+    }
+    .cabecalho .menu .item a{
+        font-size: calc(0.6em + 1vw);
+    }
+}
+@media(max-width:900px){
+    .conteudo-principal .paineis{
+        height: 500px;
+    }
+    .conteudo-principal .paineis .btn-voltar{
+        left: 20px;
+        transform: rotate(180deg)
+    }
+    .conteudo-principal .paineis .titulo{
+        font-size: calc(1em + 1vw);
+        color: #fff;
+        text-transform: uppercase;
+        padding: 70px;
+        text-align: center;
+    }
+
+}
+@media(max-width:970px){
+    .rodape .navegacao{
+    justify-content: center;
+    }
+    .rodape .navegacao .logo{
+        margin-bottom: 10px;
+        align-items: center;
+    }
+    .rodape .logo .endereco{
+        margin-bottom: 15px;
+    }
+}
+@media(max-width:1200px){
+    .quem-somos .conteudo{
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 10px;
+    }
+    .quem-somos .conteudo .imagem{
+        display:none;
+    }
+    .conteudo-principal .paineis{
+        margin-bottom: 0;
+    }
+}
